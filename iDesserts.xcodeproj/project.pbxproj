@@ -19,6 +19,7 @@
 		926B419B299CA6D900E5EE61 /* MealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B419A299CA6D900E5EE61 /* MealDetails.swift */; };
 		926B419D299D29A800E5EE61 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B419C299D29A800E5EE61 /* Ingredient.swift */; };
 		926B41A0299D2FA600E5EE61 /* MealDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B419F299D2FA600E5EE61 /* MealDetailsResponse.swift */; };
+		926B41A2299D46E400E5EE61 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B41A1299D46E400E5EE61 /* StringUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		926B419A299CA6D900E5EE61 /* MealDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetails.swift; sourceTree = "<group>"; };
 		926B419C299D29A800E5EE61 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		926B419F299D2FA600E5EE61 /* MealDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsResponse.swift; sourceTree = "<group>"; };
+		926B41A1299D46E400E5EE61 /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		926B4194299C917100E5EE61 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				926B41A1299D46E400E5EE61 /* StringUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			files = (
 				926B4193299C8F6100E5EE61 /* MealDetailView.swift in Sources */,
 				926B417E299C656200E5EE61 /* MealListView.swift in Sources */,
+				926B41A2299D46E400E5EE61 /* StringUtil.swift in Sources */,
 				926B4197299C9F2800E5EE61 /* MealRemoteImage.swift in Sources */,
 				926B419B299CA6D900E5EE61 /* MealDetails.swift in Sources */,
 				926B419D299D29A800E5EE61 /* Ingredient.swift in Sources */,

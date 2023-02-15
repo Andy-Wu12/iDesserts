@@ -21,17 +21,36 @@ struct MealDetailView: View {
         ScrollView {
             VStack {
                 Text("\(meal.strMeal)")
-                    .font(.title)
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
                 MealRemoteImage(url: meal.strMealThumb)
                     .frame(width: 250, height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .padding()
+                
+                Section {
+                    ForEach(viewModel.ingredients, id: \.name) { ingredient in
+                        HStack {
+                            Text(ingredient.name)
+                            Text(" - ")
+                            Text(ingredient.quantity)
+                        }
+                    }
+                } header: {
+                    Text("Ingredients")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding()
+                }
                 
                 Section {
                     Text(viewModel.instructions)
-                        .padding()
                 } header: {
                     Text("Instructions")
+                        .font(.title2)
+                        .fontWeight(.bold)
                 }
+                .padding()
                 
             }
             .task {

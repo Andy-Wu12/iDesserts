@@ -16,12 +16,12 @@ extension MealDetailView {
         }
         
         @Published private(set) var instructions: String
-        @Published private(set) var measurements: [Ingredient]
+        @Published private(set) var ingredients: [Ingredient]
         
         init(meal: Meal) {
             self.meal = meal
             self.instructions = ""
-            self.measurements = [Ingredient]()
+            self.ingredients = [Ingredient]()
         }
         
         func fetchMealDetails() async {
@@ -37,7 +37,7 @@ extension MealDetailView {
                 
                 if let details = items.meals.first {
                     setInstructions(using: details)
-                    setMeasurements(using: details)
+                    setIngredients(using: details)
                 }
             } catch {
                 // Handle error here - this should just create empty meals array when in ViewModel
@@ -49,7 +49,7 @@ extension MealDetailView {
             self.instructions = details.instructions
         }
         
-        private func setMeasurements(using details: MealDetailsResponse) {
+        private func setIngredients(using details: MealDetailsResponse) {
             let ingredMeasurements = [
                 Ingredient(name: details.ingredient1, quantity: details.measurement1),
                 Ingredient(name: details.ingredient2, quantity: details.measurement2),
@@ -74,7 +74,7 @@ extension MealDetailView {
             ]
             
             
-            self.measurements = ingredMeasurements
+            self.ingredients = ingredMeasurements.filter { !($0.name.isTrimmedEmpty() || $0.quantity.isTrimmedEmpty()) }
         }
         
     }
