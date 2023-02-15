@@ -11,7 +11,7 @@ import SwiftUI
 struct iDessertsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MealListView()
         }
     }
 }
