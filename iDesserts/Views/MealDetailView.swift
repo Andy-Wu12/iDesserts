@@ -20,9 +20,6 @@ struct MealDetailView: View {
     var body: some View {
         ScrollView {
             VStack {
-                Text("\(meal.strMeal)")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
                 MealRemoteImage(url: meal.strMealThumb)
                     .frame(width: 250, height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 20))

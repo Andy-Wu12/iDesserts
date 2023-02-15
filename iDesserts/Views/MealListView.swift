@@ -16,6 +16,7 @@ struct MealListView: View {
                 ForEach(viewModel.meals, id: \.idMeal) { meal in
                     NavigationLink {
                         MealDetailView(meal: meal)
+                            .navigationTitle(meal.strMeal)
                     } label: {
                         Text("\(meal.strMeal)")
                     }
