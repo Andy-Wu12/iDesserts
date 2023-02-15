@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct MealListView: View {
-    @State private var meals = [Meal]()
+    @StateObject private var viewModel = ViewModel()
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(meals, id: \.idMeal) { meal in
+                ForEach(viewModel.meals, id: \.idMeal) { meal in
                     NavigationLink {
-                        // Meal detail view here
                         MealDetailView(meal: meal)
                     } label: {
                         Text("\(meal.strMeal)")
@@ -24,28 +23,8 @@ struct MealListView: View {
             }
             .navigationTitle("Dessert Recipes")
             .task {
-                await fetchDesserts()
+                await viewModel.fetchDesserts()
             }
-        }
-    }
-    
-    func fetchDesserts() async {
-        let urlString = "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert"
-        
-        guard let url = URL(string: urlString) else {
-            print("Invalid URL: \(urlString)")
-            return
-        }
-        
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            
-            let items = try JSONDecoder().decode(MealCategoryQuery.self, from: data)
-            
-            meals = items.meals.sorted()
-        } catch {
-            // Handle error here - this should just create empty meals array when in ViewModel
-            print(error.localizedDescription)
         }
     }
 }
