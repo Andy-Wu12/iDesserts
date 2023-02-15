@@ -28,6 +28,6 @@ struct MealRemoteImage: View {
 
 struct MealRemoteImage_Previews: PreviewProvider {
     static var previews: some View {
-        MealRemoteImage(url: Meal.example.strMealThumb)
+        MealRemoteImage(url: Meal.example.thumbnailURL)
     }
 }

@@ -9,17 +9,23 @@ import Foundation
 
 // https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert
 struct Meal: Codable, Comparable {
-    let strMeal: String
-    let strMealThumb: String
-    let idMeal: String
+    let name: String
+    let thumbnailURL: String
+    let id: String
     
-    static func <(lhs: Meal, rhs: Meal) -> Bool {
-        lhs.strMeal < rhs.strMeal
+    enum CodingKeys: String, CodingKey {
+        case name = "strMeal"
+        case thumbnailURL = "strMealThumb"
+        case id = "idMeal"
     }
     
-    static let example = Meal(strMeal: "Pumpkin Pie",
-                              strMealThumb: "https://www.themealdb.com/images/media/meals/usuqtp1511385394.jpg",
-                              idMeal: "52857")
+    static func <(lhs: Meal, rhs: Meal) -> Bool {
+        lhs.name < rhs.name
+    }
+    
+    static let example = Meal(name: "Pumpkin Pie",
+                              thumbnailURL: "https://www.themealdb.com/images/media/meals/usuqtp1511385394.jpg",
+                              id: "52857")
 }
 
 struct MealCategoryQuery: Codable {

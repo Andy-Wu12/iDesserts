@@ -13,12 +13,12 @@ struct MealListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.meals, id: \.idMeal) { meal in
+                ForEach(viewModel.meals, id: \.id) { meal in
                     NavigationLink {
                         MealDetailView(meal: meal)
-                            .navigationTitle(meal.strMeal)
+                            .navigationTitle(meal.name)
                     } label: {
-                        Text("\(meal.strMeal)")
+                        Text("\(meal.name)")
                     }
                 }
             }

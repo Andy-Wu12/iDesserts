@@ -12,7 +12,7 @@ extension MealDetailView {
         private var meal: Meal
         
         private var detailsURL: String {
-            "https://themealdb.com/api/json/v1/1/lookup.php?i=\(self.meal.idMeal)"
+            "https://themealdb.com/api/json/v1/1/lookup.php?i=\(self.meal.id)"
         }
         
         @Published private(set) var instructions: String
