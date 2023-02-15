@@ -13,6 +13,8 @@
 		926B4183299C656500E5EE61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926B4182299C656500E5EE61 /* Preview Assets.xcassets */; };
 		926B418D299C67B600E5EE61 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 926B418C299C67B600E5EE61 /* .gitignore */; };
 		926B418F299C773600E5EE61 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B418E299C773600E5EE61 /* Meal.swift */; };
+		926B4193299C8F6100E5EE61 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B4192299C8F6100E5EE61 /* MealDetailView.swift */; };
+		926B4197299C9F2800E5EE61 /* MealRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B4196299C9F2800E5EE61 /* MealRemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		926B4182299C656500E5EE61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		926B418C299C67B600E5EE61 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		926B418E299C773600E5EE61 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		926B4192299C8F6100E5EE61 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		926B4196299C9F2800E5EE61 /* MealRemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		926B417A299C656200E5EE61 /* iDesserts */ = {
 			isa = PBXGroup;
 			children = (
+				926B4194299C917100E5EE61 /* Util */,
 				926B418B299C658700E5EE61 /* ViewModels */,
 				926B418A299C657800E5EE61 /* Views */,
 				926B4189299C657100E5EE61 /* Models */,
@@ -86,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				926B417D299C656200E5EE61 /* MealListView.swift */,
+				926B4192299C8F6100E5EE61 /* MealDetailView.swift */,
+				926B4196299C9F2800E5EE61 /* MealRemoteImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,6 +102,21 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		926B4194299C917100E5EE61 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				926B4195299C917500E5EE61 /* Images */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		926B4195299C917500E5EE61 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,7 +190,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926B4193299C8F6100E5EE61 /* MealDetailView.swift in Sources */,
 				926B417E299C656200E5EE61 /* MealListView.swift in Sources */,
+				926B4197299C9F2800E5EE61 /* MealRemoteImage.swift in Sources */,
 				926B418F299C773600E5EE61 /* Meal.swift in Sources */,
 				926B417C299C656200E5EE61 /* iDessertsApp.swift in Sources */,
 			);

@@ -14,7 +14,12 @@ struct MealListView: View {
         NavigationView {
             List {
                 ForEach(meals, id: \.idMeal) { meal in
-                    Text(meal.strMeal)
+                    NavigationLink {
+                        // Meal detail view here
+                        MealDetailView(meal: meal)
+                    } label: {
+                        Text("\(meal.strMeal)")
+                    }
                 }
             }
             .navigationTitle("Dessert Recipes")

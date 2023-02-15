@@ -16,6 +16,10 @@ struct Meal: Codable, Comparable {
     static func <(lhs: Meal, rhs: Meal) -> Bool {
         lhs.strMeal < rhs.strMeal
     }
+    
+    static let example = Meal(strMeal: "Pumpkin Pie",
+                              strMealThumb: "https://www.themealdb.com/images/media/meals/usuqtp1511385394.jpg",
+                              idMeal: "52857")
 }
 
 struct MealCategoryQuery: Codable {
