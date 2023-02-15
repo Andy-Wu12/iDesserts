@@ -29,7 +29,7 @@ struct MealDetailView: View {
                     .padding()
                 
                 Section {
-                    ForEach(viewModel.ingredients, id: \.name) { ingredient in
+                    ForEach(viewModel.ingredients) { ingredient in
                         HStack {
                             Text(ingredient.name)
                             Text(" - ")
