@@ -20,7 +20,7 @@ extension MealListView {
         
         func fetchMealCategory() async {
             func handleSuccess(_ mealList: MealCategoryQuery) -> Void {
-                self.meals = mealList.meals.sorted()
+                self.meals = mealList.meals.filter({ $0.thumbnailURL != nil }).sorted()
             }
             
             await fetch(from: urlString, onSuccess: handleSuccess)

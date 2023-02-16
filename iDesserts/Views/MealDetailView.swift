@@ -20,7 +20,7 @@ struct MealDetailView: View {
     var body: some View {
         ScrollView {
             VStack {
-                MealRemoteImage(url: meal.thumbnailURL)
+                MealRemoteImage(url: meal.thumbnailURL!)
                     .frame(width: 250, height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .padding()
