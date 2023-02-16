@@ -33,7 +33,7 @@ struct MealCategoryQuery: Codable {
     
 }
 
-enum MealCategory: String {
+enum MealCategory: String, CaseIterable {
     case dessert = "Dessert"
     case seafood = "Seafood"
     case chicken = "Chicken"

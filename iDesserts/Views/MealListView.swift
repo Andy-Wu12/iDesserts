@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MealListView: View {
+    @Environment(\.dismiss) var dismiss
     @StateObject private var viewModel = ViewModel()
     
     var body: some View {
@@ -23,8 +24,30 @@ struct MealListView: View {
                 }
             }
             .navigationTitle("\(viewModel.category.rawValue) Recipes")
+            .toolbar {
+                Button("Change category") {
+                    viewModel.changingCategory = true
+                }
+            }
             .task {
-                await viewModel.fetchDesserts()
+                await viewModel.fetchMealCategory()
+            }
+        }
+        .onChange(of: viewModel.category) { _ in
+            Task {
+                await viewModel.fetchMealCategory()
+            }
+        }
+        .sheet(isPresented: $viewModel.changingCategory) {
+            print(viewModel.changingCategory)
+        } content: {
+            Form {
+                Picker("Category", selection: $viewModel.category) {
+                    ForEach(MealCategory.allCases, id: \.rawValue) {
+                        Text($0.rawValue)
+                            .tag($0)
+                    }
+                }
             }
         }
     }

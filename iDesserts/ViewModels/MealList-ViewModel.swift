@@ -9,14 +9,16 @@ import SwiftUI
 
 extension MealListView {
     @MainActor class ViewModel: ObservableObject {
-        @Published private(set) var category = MealCategory.dessert
         @Published private(set) var meals = [Meal]()
+        
+        @Published var category = MealCategory.dessert
+        @Published var changingCategory = false
         
         var urlString: String {
             "https://themealdb.com/api/json/v1/1/filter.php?c=\(category)"
         }
         
-        func fetchDesserts() async {
+        func fetchMealCategory() async {
             func handleSuccess(_ mealList: MealCategoryQuery) -> Void {
                 self.meals = mealList.meals.sorted()
             }
