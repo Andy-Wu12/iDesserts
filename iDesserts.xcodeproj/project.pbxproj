@@ -20,6 +20,9 @@
 		926B41A0299D2FA600E5EE61 /* MealDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B419F299D2FA600E5EE61 /* MealDetailsResponse.swift */; };
 		926B41A2299D46E400E5EE61 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B41A1299D46E400E5EE61 /* StringUtil.swift */; };
 		926B41A4299D5A7A00E5EE61 /* MealList-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B41A3299D5A7A00E5EE61 /* MealList-ViewModel.swift */; };
+		926B41A6299D9D8600E5EE61 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 926B41A5299D9D8600E5EE61 /* README.md */; };
+		926B41AC299DAD3000E5EE61 /* DetailView.png in Resources */ = {isa = PBXBuildFile; fileRef = 926B41AA299DAD3000E5EE61 /* DetailView.png */; };
+		926B41AD299DAD3000E5EE61 /* MealList.png in Resources */ = {isa = PBXBuildFile; fileRef = 926B41AB299DAD3000E5EE61 /* MealList.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		926B419F299D2FA600E5EE61 /* MealDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsResponse.swift; sourceTree = "<group>"; };
 		926B41A1299D46E400E5EE61 /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
 		926B41A3299D5A7A00E5EE61 /* MealList-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealList-ViewModel.swift"; sourceTree = "<group>"; };
+		926B41A5299D9D8600E5EE61 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		926B41AA299DAD3000E5EE61 /* DetailView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailView.png; sourceTree = "<group>"; };
+		926B41AB299DAD3000E5EE61 /* MealList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MealList.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,8 @@
 		926B416F299C656200E5EE61 = {
 			isa = PBXGroup;
 			children = (
+				926B41A7299DAC2D00E5EE61 /* PreviewImages */,
+				926B41A5299D9D8600E5EE61 /* README.md */,
 				926B418C299C67B600E5EE61 /* .gitignore */,
 				926B417A299C656200E5EE61 /* iDesserts */,
 				926B4179299C656200E5EE61 /* Products */,
@@ -134,6 +142,15 @@
 			path = NetworkSpecific;
 			sourceTree = "<group>";
 		};
+		926B41A7299DAC2D00E5EE61 /* PreviewImages */ = {
+			isa = PBXGroup;
+			children = (
+				926B41AA299DAD3000E5EE61 /* DetailView.png */,
+				926B41AB299DAD3000E5EE61 /* MealList.png */,
+			);
+			path = PreviewImages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,9 +209,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926B41AD299DAD3000E5EE61 /* MealList.png in Resources */,
 				926B4183299C656500E5EE61 /* Preview Assets.xcassets in Resources */,
 				926B418D299C67B600E5EE61 /* .gitignore in Resources */,
+				926B41A6299D9D8600E5EE61 /* README.md in Resources */,
 				926B4180299C656500E5EE61 /* Assets.xcassets in Resources */,
+				926B41AC299DAD3000E5EE61 /* DetailView.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
