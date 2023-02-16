@@ -32,3 +32,9 @@ struct MealCategoryQuery: Codable {
     let meals: [Meal]
     
 }
+
+enum MealCategory: String {
+    case dessert = "Dessert"
+    case seafood = "Seafood"
+    case chicken = "Chicken"
+}

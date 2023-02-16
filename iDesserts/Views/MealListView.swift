@@ -22,7 +22,7 @@ struct MealListView: View {
                     }
                 }
             }
-            .navigationTitle("Dessert Recipes")
+            .navigationTitle("\(viewModel.category.rawValue) Recipes")
             .task {
                 await viewModel.fetchDesserts()
             }
