@@ -10,7 +10,7 @@ import Foundation
 // https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert
 struct Meal: Codable, Comparable {
     let name: String
-    let thumbnailURL: String
+    let thumbnailURL: String?
     let id: String
     
     enum CodingKeys: String, CodingKey {
@@ -34,10 +34,18 @@ struct MealCategoryQuery: Codable {
 }
 
 enum MealCategory: String, CaseIterable {
-    case dessert = "Dessert"
-    case seafood = "Seafood"
+    case beef = "Beef"
+    case breakfast = "Breakfast"
     case chicken = "Chicken"
+    case dessert = "Dessert"
+    case goat = "Goat"
+    case lamb = "Lamb"
+    case miscellaneous = "Miscellaneous" // Has instance of null strMealThub
+    case pasta = "Pasta"
+    case pork = "Pork"
+    case seafood = "Seafood"
+    case side = "Side"
+    case starter = "Starter"
     case vegan = "Vegan"
     case vegetarian = "Vegetarian"
-    case pasta = "Pasta"
 }
