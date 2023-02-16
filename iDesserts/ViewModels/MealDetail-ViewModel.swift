@@ -25,24 +25,14 @@ extension MealDetailView {
         }
         
         func fetchMealDetails() async {
-            guard let url = URL(string: self.detailsURL) else {
-                print("Invalid URL: \(self.detailsURL)")
-                return
-            }
-            
-            do {
-                let (data, _) = try await URLSession.shared.data(from: url)
-                
-                let items = try JSONDecoder().decode(MealDetailsResponseResult.self, from: data)
-                
+            func handleSuccess(_ items: MealDetailsResponseResult) -> Void {
                 if let details = items.meals.first {
                     setInstructions(using: details)
                     setIngredients(using: details)
                 }
-            } catch {
-                // Handle error here - this should just create empty meals array when in ViewModel
-                print(error.localizedDescription)
             }
+            
+            await fetch(from: detailsURL, onSuccess: handleSuccess)
         }
         
         private func setInstructions(using details: MealDetailsResponse) {
