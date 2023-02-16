@@ -37,4 +37,7 @@ enum MealCategory: String, CaseIterable {
     case dessert = "Dessert"
     case seafood = "Seafood"
     case chicken = "Chicken"
+    case vegan = "Vegan"
+    case vegetarian = "Vegetarian"
+    case pasta = "Pasta"
 }

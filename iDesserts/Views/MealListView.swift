@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MealListView: View {
-    @Environment(\.dismiss) var dismiss
     @StateObject private var viewModel = ViewModel()
     
     var body: some View {
@@ -39,16 +38,7 @@ struct MealListView: View {
             }
         }
         .sheet(isPresented: $viewModel.changingCategory) {
-            print(viewModel.changingCategory)
-        } content: {
-            Form {
-                Picker("Category", selection: $viewModel.category) {
-                    ForEach(MealCategory.allCases, id: \.rawValue) {
-                        Text($0.rawValue)
-                            .tag($0)
-                    }
-                }
-            }
+            ChangeCategoryForm(category: $viewModel.category, isPresented: $viewModel.changingCategory)
         }
     }
 }
@@ -56,5 +46,24 @@ struct MealListView: View {
 struct MealListView_Previews: PreviewProvider {
     static var previews: some View {
         MealListView()
+    }
+}
+
+struct ChangeCategoryForm: View {
+    @Binding var category: MealCategory
+    @Binding var isPresented: Bool
+    
+    var body: some View {
+        Form {
+            Picker("Category", selection: $category) {
+                ForEach(MealCategory.allCases, id: \.rawValue) {
+                    Text($0.rawValue)
+                        .tag($0)
+                }
+            }
+            Button("Done") {
+                isPresented = false
+            }
+        }
     }
 }
